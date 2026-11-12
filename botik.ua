@@ -1,3 +1,8 @@
+import telebot
+
+TOKEN = '5554400387:AAHOhxyY1a9sprXQQ9gfooRGrGjUMnkxncc'
+bot = telebot.TeleBot(TOKEN)
+
 from flask import Flask
 import threading
 
@@ -14,3 +19,4 @@ def run():
 
 
 threading.Thread(target=run).start()
+bot.infinity_polling()
